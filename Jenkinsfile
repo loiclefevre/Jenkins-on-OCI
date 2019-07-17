@@ -27,7 +27,7 @@ pipeline {
             docker image to our OCI private Registry*/
         steps {
             sh "sudo docker login -u 'oradbclouducm/loic.lefevre@oracle.com' -p 'z8)M3ob<Qsk;kgO>o11z' fra.ocir.io"
-            sh "sudo docker tag customnginx:1 fra.ocir.io/OCI_TENANCY/nginx:custom"
+            sh "sudo docker tag customnginx:1 fra.ocir.io/oradbclouducm/cicd/nginx:custom"
             sh 'sudo docker push fra.ocir.io/oradbclouducm/cicd/nginx:custom'
             
            }
